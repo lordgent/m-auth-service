@@ -3,7 +3,7 @@ const router = express.Router();
 const userController = require('../controllers/user-controller');
 const auth = require('../middllewares/jwt-service'); 
 
-router.get('/user/me',auth.authVerify, userController.getUserById);
+router.get('/auth/verify',auth.authVerify, userController.getUserById);
 
 router.post('/auth/signup',userController.registerUser);
 router.post('/auth/signin',userController.loginUser);
